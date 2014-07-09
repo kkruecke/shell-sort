@@ -27,11 +27,13 @@ int count_inversions(T* data, int size)
 
 
 // displays the array (just for double-checking)
-template <class T>
+template <class T> inline
 void print(const T* data, int size)
 {
-    std::ostream_iterator<T> out_it (std::cout,", ");
-    std::copy ( data, data + size, out_it );
+    std::copy ( data, data + size, 
+              std::ostream_iterator<T>(std::cout,", ")           
+              ); 
+
     std::cout << std::endl; 
 }
 /*
