@@ -8,6 +8,7 @@
 
 #include <iterator>
 #include <iostream>
+#include <algorith> // for less<t>
 #include <cmath>
 
 // returns the number of inversions in the array (just for double-checking)
@@ -24,7 +25,6 @@ int count_inversions(T* data, int size)
     }
     return count;
 }
-
 
 // displays the array (just for double-checking)
 template <class T> inline
