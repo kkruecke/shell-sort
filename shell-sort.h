@@ -1,5 +1,6 @@
 /* 
- * File:   shell-sort.h
+ * This code is based on Dr. Keith Trnka's insertion and selection sort code at:
+ * http://www.eecis.udel.edu/~trnka/CISC220-11S/lectures/basic-sorts.cc 
  */
 
 #ifndef SHELL_SORT_H
