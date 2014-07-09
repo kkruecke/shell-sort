@@ -8,22 +8,27 @@
 
 #include <iterator>
 #include <iostream>
-#include <algorith> // for less<t>
 #include <cmath>
 
-// returns the number of inversions in the array (just for double-checking)
-template <class T>
-int count_inversions(T* data, int size)
+template <typename Iter>
+int count_inversions(Iter start, Iter end)
 {
     int count = 0;
 
-    for (int i = 0; i < size - 1; i++) {
+    for (;start != end; ++start) {
 
-        if (data[i + 1] < data[i]) {
-    	    count++;
-        } 
+         if (*(start + 1) < *start) {
+
+               count++;
+         } 
+
     }
     return count;
+}
+// returns the number of inversions in the range (just for double-checking)
+int count_inversions(int *data, int size)
+{
+   return count_inversions(data, data + size - 1);   
 }
 
 // displays the array (just for double-checking)

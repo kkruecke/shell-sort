@@ -1,4 +1,5 @@
 Makefile
+prog
 dist/
 docs/
 build/
